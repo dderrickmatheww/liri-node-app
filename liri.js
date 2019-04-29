@@ -185,10 +185,22 @@ function doWhat() {
     var track = dataArr[1];
     
 
-    if(userInput === "spotify-this-song"){
-    spotifyThisSong(track)
-    } else if(userInput ===){
-
+    switch (userInput) {
+      case "concert-this":
+        concertThis(track)
+        break;
+      case "spotify-this-song":
+        spotifyThisSong(track)
+        break;
+      case "movie-this":
+        movieThis(track)
+        break;
+      case "do-this":
+        doWhat(track)
+        break;
+      default:
+        console.log("I don't understand, please use the commands! (concert-this, spotify-this-song, movie-this, or do-this)")
+        break;
     }
   })
  
