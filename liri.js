@@ -96,7 +96,7 @@ function movieThis(track) {
       
       // console.log(response.data.Search[0]);
       var imbdID = response.data.Search[0].imdbID
-      console.log(imbdID)
+     
       axios.get('http://www.omdbapi.com/?apikey=4741e6f9&i=' + imbdID + '&type=movie&r=json').then(function (data) {
 
         var movieData = data.data
@@ -180,14 +180,16 @@ function doWhat() {
     let dataArr = data.split(",");
 
     var userInput = dataArr[0];
-    console.log(userInput)
+    
 
     var track = dataArr[1];
-    console.log(track)
-
     
-    spotifyThisSong(track)
 
+    if(userInput === "spotify-this-song"){
+    spotifyThisSong(track)
+    } else if(userInput ===){
+
+    }
   })
  
 }
